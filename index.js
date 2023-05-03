@@ -1,34 +1,79 @@
 // Your code here
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") {
-    moveDodgerLeft();
-  }
- if (e.key === "ArrowRight"){
-    moveDodgerRight();
-  }
+const dodger = document.getElementById('dodger')
+
+document.addEventListener('keydown', function(event){
+
+    if (event.key === "ArrowLeft"){
+      moveDodgerLeft()
+    }
+  
+    else if (event.key === "ArrowRight"){
+      moveDodgerRight()
+    }
 });
 
+ 
 
 
-function moveDodgerLeft() {
-  const leftNumbers = dodger.style.left.replace("px", "");
-  const left = parseInt(leftNumbers, 10);
+function moveDodgerLeft(){
+const leftNumbers = dodger.style.left.replace('px', '');
+const left = parseInt(leftNumbers, 10);
 
-  if (left > 0) {
-    dodger.style.left = `${left - 1}px`;
-  }
+if (left >0){
+  dodger.style.left = `${left -1}px`;
+}
+
+}
+
+function moveDodgerRight(){
+
+const leftNumbers = dodger.style.left.replace('px', '');
+const left = parseInt (leftNumbers, 10);
+
+if (left < 360){
+  dodger.style.left = `${left +1}px`;
+}
+
 }
 
 
 
-function moveDodgerRight() {
-  const leftNumbers = dodger.style.left.replace("px", "");
-  const left = parseInt(leftNumbers, 10);
 
-  if (left < 360) {
-    dodger.style.left = `${left + 1}px`;
-  }
-}
+//I get it now
+
+
+
+
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "ArrowLeft") {
+//     moveDodgerLeft();
+//   }
+//  if (e.key === "ArrowRight"){
+//     moveDodgerRight();
+//   }
+// });
+
+
+
+// function moveDodgerLeft() {
+//   const leftNumbers = dodger.style.left.replace("px", "");
+//   const left = parseInt(leftNumbers, 10);
+
+//   if (left > 0) {
+//     dodger.style.left = `${left - 1}px`;
+//   }
+// }
+
+
+
+// function moveDodgerRight() {
+//   const leftNumbers = dodger.style.left.replace("px", "");
+//   const left = parseInt(leftNumbers, 10);
+
+//   if (left < 360) {
+//     dodger.style.left = `${left + 1}px`;
+//   }
+// }
 
 
